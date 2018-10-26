@@ -39,9 +39,9 @@ EOD
 ## install Packages & Registration
 yum -y install rhn-client-tools rhn-check rhn-setup rhnsd m2crypto yum-rhn-plugin
 rpm -Uvh http://$IP_SVR/pub/rhn-org-trusted-ssl-cert-1.0-1.noarch.rpm
-rhnreg_ks --force --serverUrl https://$HOST_SVR/XMLRPC\
---sslCACert /usr/share/rhn/RHN-ORG-TRUSTED-SSL-CERT\
---activationkey 1-b1e505ff7deff1539ba65720d37860e8\
+rhnreg_ks --force --serverUrl https://$HOST_SVR/XMLRPC \
+--sslCACert /usr/share/rhn/RHN-ORG-TRUSTED-SSL-CERT \
+--activationkey 1-b1e505ff7deff1539ba65720d37860e8 \
 --profilename=$HOSTNAME
 rhn-profile-sync
 
